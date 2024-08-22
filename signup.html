@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>signup Page</title>
+<img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExamh1OXdvOGc2MGhmMGFhYTV3Ym5saW0zcnA1azFjcjg3ajlrNHBvaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Ltz1ZA728qKw4mEY94/giphy.gif">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+
+<script>
+function validateForm() {
+    var username = document.forms["registrationForm"]["username"].value;
+    var password = document.forms["registrationForm"]["password"].value;
+    var email = document.forms["registrationForm"]["email"].value;
+    var phone = document.forms["registrationForm"]["phone"].value;
+
+    if (username == "" || password == "" || email == "" || phone == "") {
+        alert("Please fill in all the fields.");
+        return false;
+    }
+}
+</script>
+</head>
+<body>
+<h1>Registration Page</h1>
+<form name="registrationForm" action="database.php" method="post" onsubmit="return validateForm()">
+<input type="text" name="username" placeholder="Username">
+<input type="password" name="password" placeholder="Password">
+<input type="email" name="email" placeholder="Email">
+<input type="tel" name="phone" placeholder="Phone Number">
+<input type="submit" value="Submit">
+<input type="button" value="Login" onclick="window.location.href='login.html'">
+</form>
+</body>
+</html>
